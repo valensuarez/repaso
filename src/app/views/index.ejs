@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/resources/css/style.css">
+</head>
+<body>
+    
+    <h1> SOY UNA MODIFICACION DEL REPASO DE GIT/GITHUS </h1>
+    
+    <% if (login) { %>
+        <h1>El usuario conectado es: <strong> <%= name %></strong></h1>
+        <h1>tu rol en el aplicativo es: <strong> <%= rol %></strong></h1>
+        <a href="logout" class="a-logout">Logout</a>
+    <% } else { %>
+        <h1><strong> <%= name %></strong></h1>
+        <a href="login" class="a-login">Login</a>
+    <% } %>
+
+    <% if (rol === "admin") { %>
+        <div class="login-form">
+            <form action="auth" method="POST">
+                <input type="text" name="user" placeholder="user" required>
+                <input type="password" name="pass" id="pass" placeholder="password" required>
+                <input type="submit" class="btn-login" value="Login">
+            </form>
+            <a href="/register" class="btn-register">Register</a>            
+        </div>
+        <% } %> 
+</body>
+
+</html>
