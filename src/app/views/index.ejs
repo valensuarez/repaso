@@ -13,23 +13,20 @@
     
     <% if (login) { %>
         <h1>El usuario conectado es: <strong> <%= name %></strong></h1>
-        <h1>tu rol en el aplicativo es: <strong> <%= rol %></strong></h1>
+        <h1>Tu rol en el aplicativo es: <strong> <%= rol %></strong></h1>
         <a href="logout" class="a-logout">Logout</a>
+        <a href="register" class="a-logout">Register</a>
     <% } else { %>
         <h1><strong> <%= name %></strong></h1>
         <a href="login" class="a-login">Login</a>
     <% } %>
 
     <% if (rol === "admin") { %>
-        <div class="login-form">
-            <form action="auth" method="POST">
-                <input type="text" name="user" placeholder="user" required>
-                <input type="password" name="pass" id="pass" placeholder="password" required>
-                <input type="submit" class="btn-login" value="Login">
-            </form>
-            <a href="/register" class="btn-register">Register</a>            
-        </div>
+        <h1>Este es el mensaje de administrador</h1>
         <% } %> 
-</body>
 
+    <h1> otro test </h1> 
+    
+    <h3> SOY UN EJEMPLO DE RAMA </h3>
+</body>
 </html>
